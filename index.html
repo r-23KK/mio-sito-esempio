@@ -3,246 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito Web Esempio</title>
+    <title>Marco Rossi — Industrial Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        nav {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            text-align: center;
-            padding: 8rem 2rem 4rem;
-            margin-top: 60px;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #3498db;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .features {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            color: #2c3e50;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-        
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-        
-        .social-links {
-            margin: 1rem 0;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: opacity 0.3s;
-        }
-        
-        .social-links a:hover {
-            opacity: 0.8;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-links {
-                gap: 1rem;
-            }
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--black:#0a0a0a;--white:#fafafa;--gray:#6b6b6b;--light-gray:#e5e5e5;--accent:#c8ff00}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;font-weight:300;color:var(--black);background:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased}
+        ::selection{background:var(--accent);color:var(--black)}
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:difference}
+        .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:var(--white);letter-spacing:-0.02em}
+        .nav-links{display:flex;gap:3rem;list-style:none}
+        .nav-links a{color:var(--white);text-decoration:none;font-size:0.85rem;font-weight:400;letter-spacing:0.05em;text-transform:uppercase;transition:opacity 0.3s}
+        .nav-links a:hover{opacity:0.6}
+        .hero{height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem;background:var(--black);color:var(--white)}
+        .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,10vw,9rem);font-weight:700;line-height:0.95;letter-spacing:-0.04em;margin-bottom:2rem}
+        .hero-sub{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:2rem}
+        .hero p{font-size:1.1rem;max-width:400px;color:var(--gray);line-height:1.6}
+        .scroll-indicator{width:1px;height:80px;background:var(--gray);position:relative;overflow:hidden}
+        .scroll-indicator::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--white);animation:scroll 2s infinite}
+        @keyframes scroll{0%{top:-100%}100%{top:100%}}
+        .section-header{padding:8rem 4rem 4rem}
+        .section-header h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:700;letter-spacing:-0.03em;line-height:1}
+        .section-header span{color:var(--gray)}
+        .projects{padding:0 4rem}
+        .project{display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding:6rem 0;border-top:1px solid var(--light-gray);align-items:center}
+        .project:last-child{border-bottom:1px solid var(--light-gray)}
+        .project-image{aspect-ratio:4/3;background:var(--light-gray);overflow:hidden;position:relative}
+        .project-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}
+        .project:hover .project-image img{transform:scale(1.05)}
+        .project-image .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--gray)}
+        .project-info{padding:2rem 0}
+        .project-year{font-size:0.85rem;color:var(--gray);margin-bottom:1rem;letter-spacing:0.05em}
+        .project-info h3{font-family:'Space Grotesk',sans-serif;font-size:2.5rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1.5rem;line-height:1.1}
+        .project-info p{color:var(--gray);font-size:1rem;line-height:1.7;margin-bottom:2rem}
+        .project-tags{display:flex;gap:0.75rem;flex-wrap:wrap}
+        .tag{padding:0.4rem 1rem;border:1px solid var(--light-gray);font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase}
+        .about{padding:8rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;background:var(--black);color:var(--white)}
+        .about-left h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;letter-spacing:-0.03em;line-height:1;margin-bottom:2rem}
+        .about-right p{color:var(--gray);font-size:1.1rem;line-height:1.8;margin-bottom:2rem}
+        .about-right p:last-of-type{color:var(--white)}
+        .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:4rem;padding-top:4rem;border-top:1px solid rgba(255,255,255,0.1)}
+        .stat h4{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;letter-spacing:-0.02em}
+        .stat p{font-size:0.85rem;color:var(--gray);margin-top:0.5rem}
+        .contact{padding:8rem 4rem}
+        .contact h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(3rem,8vw,7rem);font-weight:700;letter-spacing:-0.04em;line-height:1;margin-bottom:4rem}
+        .contact h2 a{color:var(--black);text-decoration:none;position:relative}
+        .contact h2 a::after{content:'';position:absolute;bottom:0.1em;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform 0.4s ease}
+        .contact h2 a:hover::after{transform:scaleX(1);transform-origin:left}
+        .contact-links{display:flex;gap:4rem;margin-top:2rem}
+        .contact-links a{color:var(--gray);text-decoration:none;font-size:0.9rem;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.3s}
+        .contact-links a:hover{color:var(--black)}
+        footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--light-gray);font-size:0.8rem;color:var(--gray)}
+        footer a{color:var(--gray);text-decoration:none;transition:color 0.3s}
+        footer a:hover{color:var(--black)}
+        @media(max-width:900px){
+            nav{padding:1.5rem 2rem}
+            .nav-links{gap:1.5rem}
+            .nav-links a{font-size:0.75rem}
+            .hero{padding:2rem}
+            .hero-sub{flex-direction:column;gap:2rem;align-items:flex-start}
+            .scroll-indicator{display:none}
+            .section-header{padding:6rem 2rem 3rem}
+            .projects{padding:0 2rem}
+            .project{grid-template-columns:1fr;gap:2rem;padding:4rem 0}
+            .about{padding:6rem 2rem;grid-template-columns:1fr;gap:3rem}
+            .stats{grid-template-columns:repeat(3,1fr);gap:1rem}
+            .stat h4{font-size:2rem}
+            .contact{padding:6rem 2rem}
+            .contact-links{flex-direction:column;gap:1.5rem}
+            footer{padding:2rem;flex-direction:column;gap:1rem;text-align:center}
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="nav-container">
-            <div class="logo">MioSito</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#servizi">Servizi</a></li>
-                <li><a href="#chi-siamo">Chi Siamo</a></li>
-                <li><a href="#contatti">Contatti</a></li>
-            </ul>
-        </div>
+        <div class="logo">Marco Rossi</div>
+        <ul class="nav-links">
+            <li><a href="#work">Lavori</a></li>
+            <li><a href="#about">Chi Sono</a></li>
+            <li><a href="#contact">Contatti</a></li>
+        </ul>
     </nav>
     
-    <section class="hero" id="home">
-        <h1>Benvenuti nel Nostro Sito</h1>
-        <p>Un esempio di sito web moderno e responsive con un design pulito e professionale.</p>
-        <a href="#servizi" class="btn">Scopri di Più</a>
+    <section class="hero">
+        <h1>Industrial<br>Designer</h1>
+        <div class="hero-sub">
+            <p>Creo oggetti che uniscono forma e funzione. Ogni progetto nasce dall'osservazione e si conclude con un'esperienza.</p>
+            <div class="scroll-indicator"></div>
+        </div>
     </section>
     
-    <section class="features" id="servizi">
-        <h2>I Nostri Servizi</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🚀</div>
-                <h3>Velocità</h3>
-                <p>Sviluppo rapido e ottimizzato per prestazioni elevate e tempi di caricamento minimi.</p>
+    <div class="section-header" id="work">
+        <h2>Progetti<br><span>Selezionati</span></h2>
+    </div>
+    
+    <section class="projects">
+        <div class="project">
+            <div class="project-image"><div class="placeholder">◐</div></div>
+            <div class="project-info">
+                <div class="project-year">2026</div>
+                <h3>Luminina</h3>
+                <p>Lampada da tavolo in alluminio anodizzato con diffusore in vetro soffiato. Un equilibrio tra geometria pura e luce calda.</p>
+                <div class="project-tags">
+                    <span class="tag">Illuminazione</span>
+                    <span class="tag">Alluminio</span>
+                    <span class="tag">Vetro</span>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3>Responsive</h3>
-                <p>Design adattivo che si perfila su tutti i dispositivi: desktop, tablet e smartphone.</p>
+        </div>
+        
+        <div class="project">
+            <div class="project-image"><div class="placeholder">◑</div></div>
+            <div class="project-info">
+                <div class="project-year">2025</div>
+                <h3>Seduta Forma</h3>
+                <p>Sedia ergonomica in legno massello e polipropilene modellato. Progettata per il comfort prolungato negli spazi di lavoro.</p>
+                <div class="project-tags">
+                    <span class="tag">Arredamento</span>
+                    <span class="tag">Legno</span>
+                    <span class="tag">Polimeri</span>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Sicurezza</h3>
-                <p>Implementazione delle migliori pratiche di sicurezza per proteggere i vostri dati.</p>
+        </div>
+        
+        <div class="project">
+            <div class="project-image"><div class="placeholder">◒</div></div>
+            <div class="project-info">
+                <div class="project-year">2025</div>
+                <h3>Vaso Continuum</h3>
+                <p> serie di vasi in ceramica a forma libera, ispirati alle erosioni naturali. Ogni pezzo è unico, realizzato a mano.</p>
+                <div class="project-tags">
+                    <span class="tag">Ceramica</span>
+                    <span class="tag">Artigianato</span>
+                    <span class="tag">Limited Edition</span>
+                </div>
             </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-image"><div class="placeholder">◓</div></div>
+            <div class="project-info">
+                <div class="project-year">2024</div>
+                <h3>Toolbox Minimo</h3>
+                <p>Set di utensili da lavoro con impugnatura in矽ilio termoplastico e lame in acciaio al carbonio. Funzionalità ridotta all'essenziale.</p>
+                <div class="project-tags">
+                    <span class="tag">Utensili</span>
+                    <span class="tag">Ergonomia</span>
+                    <span class="tag">Acciaio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-left">
+            <h2>Chi<br>Sono</h2>
+        </div>
+        <div class="about-right">
+            <p>Sono Marco Rossi, industrial designer con sede a Milano. Lavoro con aziende e privati per creare prodotti che uniscono estetica e utilità.</p>
+            <p>Il mio approccio parte sempre dall'utente: osservo, ascolto, prototipo. Ogni decisione progettuale ha una ragione, ogni forma ha uno scopo.</p>
+            <p>Credo nel design come strumento di comunicazione. Un oggetto ben progettato non ha bisogno di spiegazioni.</p>
+            <div class="stats">
+                <div class="stat">
+                    <h4>12+</h4>
+                    <p>Anni di esperienza</p>
+                </div>
+                <div class="stat">
+                    <h4>80+</h4>
+                    <p>Progetti completati</p>
+                </div>
+                <div class="stat">
+                    <h4>15</h4>
+                    <p>Premi vinti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2><a href="mailto:ciao@marcorossi.it">Parliamo<br>del tuo<br>progetto</a></h2>
+        <div class="contact-links">
+            <a href="mailto:ciao@marcorossi.it">Email</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Behance</a>
         </div>
     </section>
     
     <footer>
-        <p>&copy; 2026 MioSito. Tutti i diritti riservati.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-        </div>
+        <span>&copy; 2026 Marco Rossi. Tutti i diritti riservati.</span>
+        <a href="#">Privacy Policy</a>
     </footer>
     
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({behavior:'smooth',block:'start'});
                 }
             });
-        });
-        
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
-            } else {
-                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            }
         });
     </script>
 </body>
