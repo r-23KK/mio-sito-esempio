@@ -22,6 +22,10 @@
         .hero-title{position:relative;font-size:clamp(2.25rem,6.5vw,6rem);font-weight:600;line-height:1.08;letter-spacing:0.02em;margin-bottom:2rem;display:block;width:max-content;max-width:100%;align-self:flex-start}
         .hero-title .highlight{position:relative;display:block;width:100%;text-align:left}
         .hero-title .dim{color:var(--gray)}
+        .hero-svg{width:min(818px,100%);height:auto;display:block}
+        .hero-svg text{font-family:'Helvetica Neue','Helvetica',Arial,'Inter',sans-serif;font-size:108px;font-weight:600;letter-spacing:0.02em}
+        .hero-svg .wd{fill:#ffffff}
+        .hero-svg .gr{fill:var(--gray)}
         .hero-title .highlight span{position:relative;z-index:1}
         .hero-title .slider{position:absolute;top:0;left:0;width:100%;height:100%;background:var(--white);transform:translateX(-102%);z-index:0;animation:slide 2.5s ease-in-out infinite}
         @keyframes slide{0%{transform:translateX(-102%)}50%{transform:translateX(102%)}100%{transform:translateX(-102%)}}
@@ -112,18 +116,14 @@
     
     <section class="hero">
         <div class="hero-title">
-            <span class="highlight">
-                <span><span class="dim">Product</span>design</span>
-                <span class="slider"></span>
-            </span>
-            <span class="highlight">
-                <span>Innovation<span class="dim">design</span></span>
-                <span class="slider"></span>
-            </span>
-            <span class="highlight">
-                <span><span class="dim">Invention</span>design</span>
-                <span class="slider"></span>
-            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 818.42 325.4" class="hero-svg">
+                <text x="23.98" y="102" class="wd">industrial</text>
+                <text x="465.32" y="102" class="gr">design</text>
+                <text x="23.98" y="189.95" class="gr">innovation</text>
+                <text x="489.35" y="189.95" class="wd">design</text>
+                <text x="23.98" y="277.91" class="wd">invention</text>
+                <text x="463.58" y="277.91" class="gr">design</text>
+            </svg>
         </div>
         <div class="hero-sub">
             <p>Creo oggetti che uniscono forma e funzione. Ogni progetto nasce dall'osservazione e si conclude con un'esperienza.</p>
