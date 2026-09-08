@@ -32,12 +32,25 @@
         .section-header{padding:8rem 4rem 4rem}
         .section-header h2{font-size:clamp(2.5rem,6vw,5rem);font-weight:500;letter-spacing:-0.03em;line-height:1}
         .section-header span{color:var(--gray)}
+        .hidden{display:none!important}
+        .info-section{padding:8rem 4rem;display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;border-bottom:1px solid var(--light-gray);align-items:start}
+        .info-section h2{font-size:clamp(2.5rem,5vw,4rem);font-weight:600;letter-spacing:-0.03em;line-height:1;margin-bottom:2rem}
+        .info-note{color:var(--gray);line-height:1.7;max-width:280px}
+        .awards-list{display:flex;flex-direction:column;margin-bottom:4rem}
+        .award-item{display:flex;align-items:baseline;gap:2rem;padding:1.2rem 0;border-bottom:1px solid var(--light-gray)}
+        .award-item:first-child{border-top:1px solid var(--light-gray)}
+        .award-year{font-size:0.8rem;color:var(--gray);min-width:4rem}
+        .award-name{font-weight:600;font-size:1rem;flex:1}
+        .award-cat{font-size:0.75rem;color:var(--gray);letter-spacing:0.08em;text-transform:uppercase}
+        .main-info{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;padding-top:4rem;border-top:1px solid var(--light-gray)}
+        .info-block h4{font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem}
+        .info-block p{color:var(--gray);font-size:0.9rem;line-height:1.6}
         .projects{padding:0 4rem 8rem}
         .project{position:relative;display:flex;align-items:center;justify-content:space-between;padding:3rem 0;border-top:1px solid var(--light-gray);cursor:pointer;overflow:hidden}
         .project:last-child{border-bottom:1px solid var(--light-gray)}
         .project .project-item{display:flex;align-items:baseline;gap:2rem;z-index:2}
         .project-index{font-size:0.85rem;color:var(--gray);min-width:3rem}
-        .project-name{font-size:clamp(2rem,5vw,4.5rem);font-weight:600;letter-spacing:-0.02em;line-height:1;transition:transform 0.4s ease,color 0.4s ease}
+        .project-name{font-size:clamp(1.5rem,3.5vw,2.8rem);font-weight:700;letter-spacing:-0.02em;line-height:1;transition:transform 0.4s ease,color 0.4s ease}
         .project-year{font-size:0.85rem;color:var(--gray);letter-spacing:0.08em;white-space:nowrap}
         .project-image{position:absolute;top:50%;right:16%;transform:translate(20%,-50%);width:20vw;max-width:260px;aspect-ratio:4/3;background:var(--gray);opacity:0;transition:opacity 0.5s ease,transform 0.5s ease;z-index:1;pointer-events:none}
         .project:hover .project-image{opacity:1;transform:translate(0,-50%)}
@@ -68,6 +81,8 @@
             .hero{padding:2rem}
             .hero-sub{flex-direction:column;gap:2rem;align-items:flex-start}
             .scroll-indicator{display:none}
+            .info-section{padding:6rem 2rem;grid-template-columns:1fr;gap:3rem}
+            .main-info{grid-template-columns:1fr;gap:2rem}
             .section-header{padding:6rem 2rem 3rem}
             .projects{padding:0 2rem}
             .project{flex-direction:column;align-items:flex-start;gap:1rem;padding:3rem 0}
@@ -111,11 +126,63 @@
         </div>
     </section>
     
-    <div class="section-header" id="work">
-        <h2>Project</h2>
-    </div>
+    <section class="info-section">
+        <div>
+            <h2>Awards</h2>
+            <p class="info-note">Riconoscimenti, menzioni e pubblicazioni selezionate degli ultimi anni.</p>
+        </div>
+        <div>
+            <div class="awards-list">
+                <div class="award-item">
+                    <span class="award-year">2026</span>
+                    <span class="award-name">Compasso d'Oro</span>
+                    <span class="award-cat">Illuminazione</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">2025</span>
+                    <span class="award-name">Red Dot Award</span>
+                    <span class="award-cat">Arredamento</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">2025</span>
+                    <span class="award-name">iF Design Award</span>
+                    <span class="award-cat">Utensili</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">2024</span>
+                    <span class="award-name">ADI Design Index</span>
+                    <span class="award-cat">Ceramica</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">2023</span>
+                    <span class="award-name">Good Design Award</span>
+                    <span class="award-cat">Illuminazione</span>
+                </div>
+            </div>
+            <div class="main-info">
+                <div class="info-block">
+                    <h4>Studio</h4>
+                    <p>Milano, Italia</p>
+                    <p>Su appuntamento</p>
+                </div>
+                <div class="info-block">
+                    <h4>Servizi</h4>
+                    <p>Industrial design</p>
+                    <p>Concept e prototipazione</p>
+                </div>
+                <div class="info-block">
+                    <h4>Contatti</h4>
+                    <p>ciao@023studio.it</p>
+                    <p>+39 02 1234 567</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <section class="projects">
+    <section class="projects hidden" id="work">
+        <div class="section-header">
+            <h2>Project</h2>
+        </div>
         <div class="project">
             <div class="project-item">
                 <span class="project-index">01</span>
@@ -150,6 +217,42 @@
             </div>
             <span class="project-year">2024</span>
             <div class="project-image"><div class="placeholder">◓</div></div>
+        </div>
+        
+        <div class="project">
+            <div class="project-item">
+                <span class="project-index">05</span>
+                <h3 class="project-name">Ombra Lamp</h3>
+            </div>
+            <span class="project-year">2024</span>
+            <div class="project-image"><div class="placeholder">◔</div></div>
+        </div>
+        
+        <div class="project">
+            <div class="project-item">
+                <span class="project-index">06</span>
+                <h3 class="project-name">Tavolo Ligne</h3>
+            </div>
+            <span class="project-year">2023</span>
+            <div class="project-image"><div class="placeholder">◕</div></div>
+        </div>
+        
+        <div class="project">
+            <div class="project-item">
+                <span class="project-index">07</span>
+                <h3 class="project-name">Specchio Galea</h3>
+            </div>
+            <span class="project-year">2023</span>
+            <div class="project-image"><div class="placeholder">◖</div></div>
+        </div>
+        
+        <div class="project">
+            <div class="project-item">
+                <span class="project-index">08</span>
+                <h3 class="project-name">Carrello Mobile</h3>
+            </div>
+            <span class="project-year">2022</span>
+            <div class="project-image"><div class="placeholder">◗</div></div>
         </div>
     </section>
     
@@ -194,7 +297,23 @@
     </footer>
     
     <script>
+        const workSection = document.getElementById('work');
+        const workLink = document.querySelector('a[href="#work"]');
+        
+        if (workLink && workSection) {
+            workLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                workSection.classList.toggle('hidden');
+                if (!workSection.classList.contains('hidden')) {
+                    setTimeout(() => {
+                        workSection.scrollIntoView({behavior:'smooth',block:'start'});
+                    }, 50);
+                }
+            });
+        }
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') === '#work') return;
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
